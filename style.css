@@ -1,0 +1,36 @@
+#target{
+	position: fixed;
+	margin:0 auto;
+	/*margin-left: 500px;*/
+}
+
+.flickrGallery{
+	width: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	opacity: 50%;
+	-webkit-mask-box-image: url(imgs/mask4.png);
+	z-index: -1;
+}
+
+.flickrGallery2{
+	width: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	opacity: 50%;
+	-webkit-mask-box-image: url(imgs/mask4.png);
+	z-index: -1;
+}
+
+body{
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#image{
+	display:block;
+	margin: auto;
+	margin-top: 35%;
+}

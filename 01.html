@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+    
+       <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <meta charset = "utf-8"/>
+         <script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js">
+         </script>
+         <script type="text/javascript" src="libraries/voiceemo.js"> </script>
+        <title>TESTVoice Emo</title>
+       
+        <style type='text/css'>
+            
+        </style>
+    </head>
+    <body>
+        <audio id="audiox" controls autoplay></audio>
+       <input type="button" id="record" value="Record">
+       <input type="button" id="export" value="export">
+       <div id="message"></div>
+
+       <!-- <img src="porthole.jpg" width="430" height="365"> -->
+ 
+        <img src="imgs/pic1.jpg"
+           style="position:relative; top:-325px;
+                  -webkit-mask-box-image: url(mask1.png);">
+        </img>
+    </body>
+    
+
+
+    <script type="text/javascript">
+    var audio=$("#audiox");
+    $("#record").click(function()
+    {
+    	startrecord();
+    	
+    });		
+    
+
+   
+    $("#export").click(function()
+    {
+    	
+    	var _callback=(function _GetVoiceResCallback(resinfo)
+    		{
+    		 alert( JSON.stringify( resinfo));
+    		}	
+    	
+    		)
+    	
+    	var json=analysis(audio,_callback,'100277','dbe63a58364b232d83c2e59b3e3db4ed','h5_tag','dupf');
+    	//alert("RES INFO IS"+json);
+    }		
+    );
+    
+    
+    
+    
+    </script>
+    
+</html>
